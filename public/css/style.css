@@ -1,0 +1,276 @@
+/* --- Card central i logo --- */
+.center-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(10, 10, 30, 0.85);
+  border-radius: 24px;
+  box-shadow: 0 0 40px #00fff7, 0 0 10px #0ff;
+  padding: 48px 40px 32px 40px;
+  text-align: center;
+  z-index: 1;
+}
+.logo-main {
+  width: 160px;
+  margin-bottom: 32px;
+  filter: drop-shadow(0 0 16px #00fff7);
+}
+
+/* --- Botons retro neon en graella 2x2 --- */
+.btn-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 18px;
+  margin-top: 24px;
+  justify-items: center;
+  align-items: center;
+}
+.neon-btn, .neon-btn:link, .neon-btn:visited {
+  font-family: 'Press Start 2P', 'Orbitron', 'Montserrat', Arial, sans-serif;
+  font-size: 0.95rem;
+  color: #fff;
+  background: transparent;
+  border: 2px solid #F20881;
+  border-radius: 8px;
+  padding: 14px 36px;
+  margin: 0 auto;
+  cursor: pointer;
+  box-shadow: 0 0 8px #F20881, 0 0 32px #F20881 inset;
+  text-shadow: 0 0 8px #F20881, 0 0 2px #fff;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  width: 180px;
+  height: 56px;
+  min-width: 180px;
+  min-height: 56px;
+  max-width: 180px;
+  max-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.neon-btn:hover, .neon-btn:focus {
+  background: #F20881;
+  color: #0a0a1e;
+  box-shadow: 0 0 24px #F20881, 0 0 64px #F20881 inset;
+  text-decoration: none;
+}
+.btn-group .neon-btn {
+  font-size: 0.8rem;
+  padding: 10px 20px;
+  height: 44px;
+  min-height: 44px;
+  max-height: 44px;
+  width: 140px;
+  min-width: 140px;
+  max-width: 140px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive per a mòbils */
+@media (max-width: 600px) {
+  .container {
+    max-width: 98vw;
+    padding: 12px 4px;
+  }
+}
+
+@media (max-width: 600px) {
+  .center-card {
+    padding: 24px 8px 16px 8px;
+    width: 90vw;
+  }
+  .logo-main {
+    width: 100px;
+  }
+  .btn-group {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+  }
+  .neon-btn {
+    width: 100%;
+    min-width: unset;
+    max-width: unset;
+    height: 38px;
+    min-height: 38px;
+    max-height: 38px;
+    font-size: 0.7rem;
+    padding: 8px 8px;
+  }
+}
+
+/* --- Dropdown idioma --- */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropbtn {
+  background: rgba(10, 10, 30, 0.95);
+  color: #fff;
+  padding: 10px 18px;
+  font-size: 1rem;
+  border: 2px solid #F20881;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 8px #F20881;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.dropbtn img {
+  margin-right: 6px;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background: rgba(10, 10, 30, 0.98);
+  min-width: 160px;
+  box-shadow: 0 0 16px #F20881;
+  border-radius: 8px;
+  z-index: 10;
+}
+.dropdown-content a {
+  color: #fff;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #222;
+  transition: background 0.2s;
+}
+.dropdown-content a:last-child {
+  border-bottom: none;
+}
+.dropdown-content a:hover {
+  background: #F20881;
+  color: #0a0a1e;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown:hover .dropbtn {
+  background: #F20881;
+  color: #0a0a1e;
+}
+
+/* --- Estils per a la carta del menú, coherent amb l'index --- */
+.titulo-carta {
+  font-family: 'Press Start 2P', 'Orbitron', 'Montserrat', Arial, sans-serif;
+  color: #F20881;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 32px;
+  text-shadow: 0 0 8px #F20881, 0 0 2px #fff;
+}
+section {
+  margin-bottom: 36px;
+  width: 100%;
+}
+section h2 {
+  font-family: 'Press Start 2P', 'Orbitron', 'Montserrat', Arial, sans-serif;
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 18px;
+  text-shadow: 0 0 8px #F20881, 0 0 2px #fff;
+}
+.menu-item {
+  background: rgba(10, 10, 30, 0.85);
+  border-radius: 16px;
+  box-shadow: 0 0 16px #F20881, 0 0 4px #F20881;
+  padding: 18px 24px;
+  margin-top: 2%;
+  margin-right: 1%;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  color: #fff;
+  font-family: 'Montserrat', Arial, sans-serif;
+  position: relative;
+}
+.menu-item img.gif-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px #F20881;
+  background: #181828;
+}
+.menu-item h3 {
+  font-family: 'Press Start 2P', 'Orbitron', 'Montserrat', Arial, sans-serif;
+  color: #F7B14E;
+  font-size: 0.9rem;
+  margin: 0 0 6px 0;
+  text-shadow:
+    -1px -1px 0 #1A535C,
+     1px -1px 0 #1A535C,
+    -1px  1px 0 #1A535C,
+     1px  1px 0 #1A535C,
+     0px  2px 0 #1A535C,
+     2px  0px 0 #1A535C,
+     0px -2px 0 #1A535C,
+    -2px  0px 0 #1A535C;
+}
+.menu-item p {
+  font-size: 0.85rem;
+  color: #fff;
+  margin: 0 0 0 0;
+  flex: 1;
+}
+.menu-item .price {
+  font-family: 'Press Start 2P', 'Orbitron', 'Montserrat', Arial, sans-serif;
+  color: #fff;
+  background: #be0866;
+  border-radius: 8px;
+  padding: 6px 16px;
+  font-size: 0.9rem;
+  margin-left: auto;
+  box-shadow: 0 0 8px #F20881;
+}
+
+/* Responsive per a mòbils */
+@media (max-width: 600px) {
+  .container {
+    max-width: 98vw;
+    padding: 12px 4px;
+  }
+  .titulo-carta {
+    font-size: 0.8rem;
+    margin-bottom: 18px;
+  }
+  section h2 {
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+  }
+  .menu-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 8px;
+    gap: 10px;
+  }
+  .menu-item img.gif-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .menu-item .price {
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    margin-left: 0;
+    margin-top: 6px;
+  }
+}

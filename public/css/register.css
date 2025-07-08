@@ -1,0 +1,98 @@
+/* Estil retro-neó per login/register Pixel Bar */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a0030 0%, #2a0040 100%);
+    font-family: 'Press Start 2P', monospace, Arial, sans-serif;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pixel-card {
+    background: rgba(30,0,40,0.92);
+    border: 2px solid #F20881;
+    border-radius: 18px;
+    box-shadow: 0 0 8px #F20881, 0 0 2px #fff inset;
+    padding: 2.5em 2em 2em 2em;
+    max-width: 350px;
+    width: 100%;
+    margin: 2em auto;
+    text-align: center;
+}
+.pixel-card h2 {
+    color: #F20881;
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+    text-shadow: 0 0 4px #F20881, 0 0 1px #fff;
+}
+.pixel-input {
+    width: 100%;
+    padding: 0.8em 0;
+    margin-bottom: 1.2em;
+    border: 2px solid #F20881;
+    border-radius: 8px;
+    background: #1a0030;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1em;
+    outline: none;
+    box-shadow: 0 0 4px #F20881 inset;
+    transition: border 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+}
+.pixel-input:focus {
+    border-color: #F7B14E;
+    box-shadow: 0 0 8px #F7B14E;
+}
+.pixel-btn {
+    width: 100%;
+    padding: 0.8em 0;
+    background: #F20881;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 1em;
+    letter-spacing: 1px;
+    box-shadow: 0 0 8px #F20881, 0 0 2px #fff inset;
+    cursor: pointer;
+    margin-bottom: 1em;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.pixel-btn:hover, .pixel-btn:focus {
+    background: #F7B14E;
+    color: #1a0030;
+    box-shadow: 0 0 12px #F7B14E, 0 0 2px #fff inset;
+}
+.pixel-link {
+    color: #F7B14E;
+    text-decoration: underline;
+    font-size: 0.9em;
+    display: inline-block;
+    margin-top: 0.5em;
+    transition: color 0.2s;
+}
+.pixel-link:hover {
+    color: #F20881;
+}
+.pixel-error {
+    color: #F20881;
+    background: rgba(255,0,80,0.08);
+    border: 1px solid #F20881;
+    border-radius: 6px;
+    padding: 0.5em 1em;
+    margin-bottom: 1em;
+    font-size: 0.95em;
+}
+@media (max-width: 500px) {
+    .pixel-card {
+        padding: 1.2em 0.5em 1.5em 0.5em;
+        max-width: 98vw;
+    }
+    .pixel-card h2 {
+        font-size: 1em;
+    }
+    .pixel-btn {
+        font-size: 0.9em;
+    }
+}
