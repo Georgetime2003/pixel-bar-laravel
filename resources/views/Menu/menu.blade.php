@@ -59,12 +59,42 @@
             </div>
         </div>
     </nav>
-    <style>
-
-    </style>
     <!-- FI NAVBAR -->
 
     <div class="container">
+        <!-- COMBO ESPECIAL - ESTRELLA DEL MENÚ -->
+        <section class="expandable-section categoria-combo combo-estrella">
+            <h2 class="expandable-header combo-header">
+                <span class="arrow">▼</span>
+                <img src="/img/question_block.gif" alt="Question Block" class="mario-question" width="24" height="24" style="margin-left: 8px;">
+                <span data-i18n="combo-estrella" class="expand-title combo-title">COMBO ESTRELLA</span>
+            </h2>
+            <div class="section-content">
+                <div class="menu-item combo-item">
+                    <div class="combo-options">
+                        <div class="combo-choice">
+                            <h4 data-i18n="combo-hamburguesa">🍔 Hamburguesa Crispy</h4>
+                            <span data-i18n="combo-o" class="combo-or">O</span>
+                            <h4 data-i18n="combo-pizza">🍕 Pizza</h4>
+                        </div>
+                        <div class="combo-plus">+</div>
+                        <div class="combo-sides">
+                            <h4 data-i18n="combo-patatas">🍟 Patatas</h4>
+                        </div>
+                        <div class="combo-plus">+</div>
+                        <div class="combo-drinks">
+                            <h4 data-i18n="combo-refresco">🥤 Refresco</h4>
+                            <span data-i18n="combo-o" class="combo-or">O</span>
+                            <h4 data-i18n="combo-cerveza">🍺 Cerveza</h4>
+                        </div>
+                    </div>
+                    <div class="combo-price-section">
+                        <span data-i18n="combo-precio-especial" class="price">10,00€</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <!-- El títol ja està al navbar -->
         <!-- Hamburguesas -->
         <section class="expandable-section categoria-hamburguesas">
@@ -74,22 +104,10 @@
             </h2>
             <div class="section-content">
                 <div class="menu-item">
-                    <img src="/img/icons/15_burger.png" alt="Pixel Burger" class="gif-icon">
-                    <h3>Pixel Burger</h3>
-                    <p data-i18n="pixel-burger-ingredients">Carne de res, queso cheddar, bacon y salsa especial.</p>
-                    <span class="price">8,50€</span>
-                </div>
-                <div class="menu-item">
-                    <img src="/img/icons/15_burger.png" alt="Burger" class="gif-icon">
-                    <h3>Burger</h3>
-                    <p data-i18n="burger-ingredients">Lechuga, tomate, cheddar, mayonesa</p>
-                    <span class="price">8,50€</span>
-                </div>
-                <div class="menu-item">
-                    <img src="/img/icons/15_burger.png" alt="Fire Burger" class="gif-icon">
-                    <h3>🔥 Fire Burger</h3>
-                    <p data-i18n="fire-burger-ingredients">Doble carne, jalapeños y salsa picante.</p>
-                    <span class="price">9,50€</span>
+                    <img src="/img/icons/15_burger.png" alt="Crispy Burger" class="gif-icon">
+                    <h3>Crispy Burger</h3>
+                    <p data-i18n="pixel-burger-ingredients"></p>
+                    <span class="price">7,50€</span>
                 </div>
             </div>
         </section>
@@ -97,22 +115,32 @@
         <section class="expandable-section categoria-pizzas">
             <h2 class="expandable-header">
                 <span class="arrow">▼</span>
-                <span data-i18n="pizza" class="expand-title">🍕 Pizzas</span>
+          
+                <span data-i18n="pizza" class="expand-title"> Pizzas</span>
             </h2>
             <div class="section-content">
                 <div class="menu-item">
+                    <img src="/img/icons/81_pizza.png" alt="Pizza 4 quesos" class="gif-icon">
                     <h3 data-i18n="pizza-4-quesos">4 Quesos</h3>
                     <p data-i18n="pizza-4-quesos-ingredients">Mozarella, Gorgonzola, Parmesano, Queso de cabra</p>
                     <span class="price">8,50€</span>
                 </div>
                 <div class="menu-item">
+                     <img src="/img/icons/81_pizza.png" alt="Pizza Barbacoa" class="gif-icon">
                     <h3 data-i18n="pizza-barbacoa">Barbacoa</h3>
                     <p data-i18n="pizza-barbacoa-ingredients">Salsa BBQ, mozarella, Pollo, Cebolla morada, Beacon</p>
                     <span class="price">8,50€</span>
                 </div>
                 <div class="menu-item">
+                     <img src="/img/icons/81_pizza.png" alt="Pizza doble pepperoni" class="gif-icon">
                     <h3 data-i18n="pizza-doble-pepperoni">Doble Pepperoni</h3>
                     <p data-i18n="pizza-barbacoa-ingredients">Mozarella</p>
+                    <span class="price">8,50€</span>
+                </div>
+                <div class="menu-item">
+                     <img src="/img/icons/81_pizza.png" alt="Pizza xampinyons" class="gif-icon">
+                    <h3 data-i18n="pizza-xampinyons">Xampinyons</h3>
+                    <p data-i18n="pizza-xampinyons-ingredients">Parnil dolç, formatge, xampinyons </p>
                     <span class="price">8,50€</span>
                 </div>
             </div>
@@ -121,18 +149,14 @@
         <section class="expandable-section categoria-hotdog">
             <h2 class="expandable-header">
                 <span class="arrow">▼</span>
-                <span data-i18n="hot-dogs" class="expand-title">🌭 Hot Dogs</span>
+                <span data-i18n="hot-dogs" class="expand-title"> Hot Dogs</span>
             </h2>
             <div class="section-content">
                 <div class="menu-item">
+                    <img src="/img/icons/54_hotdog.png" alt="Frankfurt" class="gif-icon">
                     <h3 data-i18n="hot-dog">Hot Dog</h3>
-                    <p data-i18n="hot-dog-ingredients">Salsa cheddar</p>
+                    <p data-i18n="hot-dog-ingredients"></p>
                     <span class="price">4,50€</span>
-                </div>
-                <div class="menu-item">
-                    <h3 data-i18n="hot-dog-especial">Hot Dog Especial</h3>
-                    <p data-i18n="hot-dog-especial-ingredients">Cebolla frita crujiente o Patata paja</p>
-                    <span class="price">6,00€</span>
                 </div>
             </div>
         </section>
@@ -185,11 +209,11 @@
                 </div>
                 <div class="menu-item">
                     <h3 data-i18n="tonica">Tónica</h3>
-                    <span class="price">2,50€</span>
+                    <span class="price">2,80€</span>
                 </div>
                 <div class="menu-item">
                     <h3 data-i18n="batido-cacao">Batido Cacao</h3>
-                    <span class="price">2,50€</span>
+                    <span class="price">2,90€</span>
                 </div>
             </div>
         </section>
@@ -210,31 +234,31 @@
                 </div>
                 <div class="menu-item">
                     <h3>Alhambra Reserva</h3>
-                    <span class="price">6,00€</span>
+                    <span class="price">3,00€</span>
                 </div>
                 <div class="menu-item">
                     <h3>Estrella galicia</h3>
-                    <span class="price">2,80</span>
+                    <span class="price">2,80€</span>
                 </div>
                 <div class="menu-item">
                     <h3>Volldamm</h3>
-                    <span class="price">3,00</span>
+                    <span class="price">3,00€</span>
                 </div>
                 <div class="menu-item">
                     <h3>Corona</h3>
-                    <span class="price">3,20</span>
+                    <span class="price">3,20€</span>
                 </div>
                 <div class="menu-item">
                     <h3>Desperados</h3>
-                    <span class="price">3,20</span>
+                    <span class="price">3,20€</span>
                 </div>
                 <div class="menu-item">
                     <h3>Asashi</h3>
-                    <span class="price">3,20</span>
+                    <span class="price">3,20€</span>
                 </div>
                 <div class="menu-item">
                     <h3 data-i18n="hidromiel">Hidromiel</h3>
-                    <span class="price">3,20</span>
+                    <span class="price">5,20€</span>
                 </div>
             </div>
         </section>
@@ -242,67 +266,62 @@
         <section class="expandable-section categoria-aperitivos">
             <h2 class="expandable-header">
                 <span class="arrow">▼</span>
-                <span data-i18n="aperitivos" class="expand-title">🍟 Aperitivos</span>
+                <span data-i18n="aperitivos" class="expand-title"> Aperitivos</span>
             </h2>
             <div class="section-content">
                 <div class="menu-item">
+                    <img src="/img/icons/45_frenchfries_dish.png" alt="Patates fregides" class="gif-icon">
                     <h3 data-i18n="patatas-fritas">Patatas firtas</h3>
                     <p data-i18n="patatas-fritas-ingredients">Papas fritas con sal</p>
                     <span class="price">5,00€</span>
                 </div>
                 <div class="menu-item">
+                    <img src="/img/icons/78_potatochips_bowl.png" alt="Patates Braves" class="gif-icon">
                     <h3 data-i18n="patatas-bravas">Patatas Bravas</h3>
                     <p data-i18n="patatas-bravas-ingredients">Patatas Bravas</p>
                     <span class="price">5,75€</span>
                 </div>
                 <div class="menu-item">
+                    <img src="/img/icons/45_frenchfries_dish.png" alt="Patates fregides" class="gif-icon">
                     <h3 data-i18n="patatas-jq">Patatas J & Q</h3>
                     <p data-i18n="patatas-jq-ingredients">Patatas jamón y queso</p>
                     <span class="price">6,00€</span>
                 </div>
                 <div class="menu-item">
+                    <img src="/img/icons/72_nacho_dish.png" alt="Nachos" class="gif-icon">
                     <h3 data-i18n="nachos">Nachos</h3>
                     <p data-i18n="nachos-ingredients">Nachos</p>
                     <span class="price">8,75€</span>
                 </div>
                 <div class="menu-item">
+                    <img src="/img/icons/69_meatball.png" alt="Takoyaki" class="gif-icon">
                     <h3 data-i18n="takoyaki">Takoyaki</h3>
                     <p data-i18n="takoyaki-ingredients">6U</p>
                     <span class="price">7,00€</span>
                 </div>
                 <div class="menu-item">
+                    <img src="/img/icons/37_dumplings_dish.png" alt="Gyozas" class="gif-icon">
                     <h3 data-i18n="gyozas">Gyozas</h3>
                     <p data-i18n="gyozas-ingredients">Gyozas carne o verdura (4U)</p>
                     <span class="price">7,00€</span>
                 </div>
                 <div class="menu-item">
+                    <img src="/img/icons/103_nuggets.png" alt="Nuggets de pollo" class="gif-icon">
                     <h3 data-i18n="nuggets">Chicken Nuggets</h3>
                     <p data-i18n="nuggets-ingredients">Nuggets de pollo</p>
-                    <span class="price">7,00€</span>
+                    <span class="price">4,50€</span>
                 </div>
                 <div class="menu-item">
+                    <img src="/img/icons/104_mochis.png" alt="Mochis" class="gif-icon">
                     <h3 data-i18n="mochi">Mochi</h3>
                     <p data-i18n="mochi-ingredients">Mochi de té macha</p>
-                    <span class="price">7,00€</span>
+                    <span class="price">4,50€</span>
                 </div>
                 <div class="menu-item">
-                    <h3 data-i18n="coulant">Coulant</h3>
+                    <img src="/img/icons/31_chocolatecake_dish.png" alt="Coulant" class="gif-icon">
+                    <h3 data-i18n="coulant"> Coulant</h3>
                     <p data-i18n="coulant-ingredients">Mochi de té macha</p>
-                    <span class="price">7,00€</span>
-                </div>
-            </div>
-        </section>
-        <!-- Combo -->
-        <section class="expandable-section categoria-combo">
-            <h2 class="expandable-header">
-                <span class="arrow">▼</span>
-                <span class="expand-title">🥡 Combo</span>
-            </h2>
-            <div class="section-content">
-                <div class="menu-item">
-                    <h3>COMBO</h3>
-                    <p data-i18n="combo">H.crispy chicken o Pizza + Patatas + Refresco o Cerveza</p>
-                    <span class="price">10,00</span>
+                    <span class="price">4,50€</span>
                 </div>
             </div>
         </section>
@@ -314,14 +333,14 @@
             </h2>
             <div class="section-content">
                 <div class="menu-item">
-                    <img src="pixelcake.gif" alt="Pixel Cake" class="gif-icon">
-                    <h3>🎂 Pixel Cake</h3>
+                    <img src="/img/icons/31_chocolatecake_dish.png" alt="Coulant" class="gif-icon">
+                    <h3> Pixel Cake</h3>
                     <p data-i18n="pixel-cake-ingredients">Delicioso pastel de chocolate con trozos de pixel.</p>
                     <span class="price">4,00€</span>
                 </div>
                 <div class="menu-item">
-                    <img src="icecream.gif" alt="Helado" class="gif-icon">
-                    <h3 data-i18n="helado-pixelado">🍦 Helado Pixelado</h3>
+                    <img src="img/icons/57_icecream.png" alt="Helado" class="gif-icon">
+                    <h3 data-i18n="helado-pixelado"> Helado Pixelado</h3>
                     <p data-i18n="helado-pixelado-ingredients">Helado de vainilla con chispas de chocolate.</p>
                     <span class="price">3,50€</span>
                 </div>
