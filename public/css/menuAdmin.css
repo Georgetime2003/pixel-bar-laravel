@@ -1,0 +1,621 @@
+/* Admin Panel CSS - Pixel Art Style */
+
+/* Main container styling - LEGACY (kept for compatibility) */
+.section {
+    top:100px;
+    background: rgba(0, 0, 0, 0.85);
+    border: 3px solid #00ff00;
+    border-radius: 0;
+    margin: 15px auto;
+    padding: 15px;
+    max-width: 600px;
+    box-shadow: 
+        0 0 0 2px #ffffff,
+        0 0 0 3px #00ff00,
+        3px 3px 0 3px rgba(0, 255, 0, 0.3);
+    position: relative;
+}
+
+.section h2 {
+    font-family: 'Press Start 2P', monospace;
+    color: #00ff00;
+    text-align: center;
+    margin-bottom: 18px;
+    font-size: 13px;
+    text-shadow: 1px 1px 0px #000000;
+    letter-spacing: 1px;
+}
+
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.8rem;
+    color: #fff;
+    background: transparent;
+    border: 2px solid #00fff7;
+    border-radius: 8px;
+    padding: 12px 20px;
+    cursor: pointer;
+    box-shadow: 0 0 8px #00fff7;
+    text-shadow: 0 0 8px #00fff7;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-btn span {
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+            
+.back-btn:hover {
+    background: #00fff7;
+    color: #0a0a1e;
+    box-shadow: 0 0 20px #00fff7;
+    text-decoration: none;
+}
+
+
+
+/* Estils per al formulari d'afegir producte */
+.add-product-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(10, 10, 30, 0.95);
+    border-radius: 24px;
+    box-shadow: 0 0 40px #00fff7, 0 0 10px #0ff;
+    padding: 30px 40px;
+    text-align: center;
+    z-index: 1000;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    backdrop-filter: blur(10px);
+}
+
+.add-product-title {
+    font-family: 'Press Start 2P', monospace;
+    color: #00fff7;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    text-shadow: 0 0 10px #00fff7;
+}
+
+.close-form-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-family: 'Press Start 2P', monospace;
+    background: transparent;
+    border: none;
+    color: #ff4444;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 5px;
+    transition: all 0.3s ease;
+    z-index: 1001;
+}
+
+.close-form-btn:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #ff4444;
+    transform: scale(1.1);
+}
+
+/* Modal overlay con efecto blur */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+.product-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.form-label {
+    font-family: 'Press Start 2P', monospace;
+    color: #00fff7;
+    font-size: 0.7rem;
+    text-shadow: 0 0 5px #00fff7;
+}
+
+.form-input {
+    font-family: 'Press Start 2P', monospace;
+    background: rgba(15, 15, 45, 0.9);
+    border: 2px solid #00fff7;
+    border-radius: 8px;
+    padding: 10px 14px;
+    color: #fff;
+    font-size: 0.65rem;
+    outline: none;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Asegurar que inputs y selects tengan el mismo ancho */
+.product-form input.form-input,
+.product-form select.form-input {
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+}
+
+/* Estilo específico para checkbox */
+.product-form input[type="checkbox"].form-input {
+    width: auto;
+    display: inline-block;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(15, 15, 45, 0.9);
+    border: 2px solid #00fff7;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.product-form input[type="checkbox"].form-input:checked {
+    background: rgba(0, 255, 247, 0.2);
+    border-color: #F20881;
+}
+
+.product-form input[type="checkbox"].form-input:checked::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #08cff2;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 12px;
+    text-shadow: 0 0 5px #F20881;
+}
+
+.product-form input[type="checkbox"].form-input:focus {
+    border-color: #F20881;
+    box-shadow: 0 0 10px rgba(242, 8, 129, 0.5);
+}
+
+.product-form input[type="checkbox"].form-input:hover {
+    box-shadow: 0 0 8px rgba(0, 255, 247, 0.3);
+}
+
+.form-input:focus {
+    border-color: #F20881;
+    box-shadow: 0 0 10px rgba(242, 8, 129, 0.5);
+}
+
+.form-input::placeholder {
+    color: #aaa;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.55rem;
+}
+
+.add-product-btn {
+    font-family: 'Press Start 2P', monospace;
+    background: rgba(15, 15, 45, 0.9);
+    border: 2px solid #F20881;
+    border-radius: 8px;
+    padding: 12px 20px;
+    color: #F20881;
+    font-size: 0.7rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.add-product-btn:hover {
+    background: #F20881;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(242, 8, 129, 0.6);
+}
+
+.show-add-form-btn {
+    font-family: 'Press Start 2P', monospace;
+    background: rgba(0, 255, 247, 0.1);
+    border: 2px solid #00fff7;
+    border-radius: 8px;
+    padding: 12px 20px;
+    color: #00fff7;
+    font-size: 0.7rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.show-add-form-btn:hover {
+    background: #00fff7;
+    color: #0a0a1e;
+    box-shadow: 0 0 20px rgba(0, 255, 247, 0.6);
+}
+
+/* Ajustar contenidor de llista de productes */
+.products-list-container {
+    position: relative;
+    top: 100px;
+    background: rgba(10, 10, 30, 0.85);
+    border-radius: 24px;
+    box-shadow: 0 0 40px #00fff7, 0 0 10px #0ff;
+    padding: 0;
+    margin-top: 100px;
+    text-align: center;
+    z-index: 1;
+    width: 90%;
+    max-width: 1000px;
+    max-height: 85vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.products-header {
+    position: sticky;
+    top: 0;
+    background: rgba(10, 10, 30, 0.95);
+    padding: 30px 40px 20px 40px;
+    border-radius: 24px 24px 0 0;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(0, 255, 247, 0.3);
+}
+
+.products-title {
+    font-family: 'Press Start 2P', monospace;
+    color: #00fff7;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #00fff7;
+}
+
+/* Search and filter controls */
+.search-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.search-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 150px;
+}
+
+.search-label {
+    font-family: 'Press Start 2P', monospace;
+    color: #00fff7;
+    font-size: 0.6rem;
+    text-shadow: 0 0 5px #00fff7;
+    text-align: left;
+}
+
+.search-input {
+    font-family: 'Press Start 2P', monospace;
+    background: rgba(15, 15, 45, 0.9);
+    border: 2px solid #00fff7;
+    border-radius: 8px;
+    padding: 8px 12px;
+    color: #fff;
+    font-size: 0.6rem;
+    outline: none;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.search-input:focus {
+    border-color: #F20881;
+    box-shadow: 0 0 10px rgba(242, 8, 129, 0.5);
+}
+
+.search-input::placeholder {
+    color: #aaa;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.5rem;
+}
+
+.sort-select {
+    font-family: 'Press Start 2P', monospace;
+    background: rgba(15, 15, 45, 0.9);
+    border: 2px solid #00fff7;
+    border-radius: 8px;
+    padding: 8px 12px;
+    color: #fff;
+    font-size: 0.6rem;
+    outline: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.sort-select:focus {
+    border-color: #F20881;
+    box-shadow: 0 0 10px rgba(242, 8, 129, 0.5);
+}
+
+.sort-select option {
+    background: rgba(15, 15, 45, 0.95);
+    color: #fff;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.6rem;
+}
+
+.clear-filters-btn {
+    font-family: 'Press Start 2P', monospace;
+    background: rgba(255, 68, 68, 0.1);
+    border: 2px solid #ff4444;
+    border-radius: 8px;
+    padding: 8px 12px;
+    color: #ff4444;
+    font-size: 0.55rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 18px;
+}
+
+.clear-filters-btn:hover {
+    background: #ff4444;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(255, 68, 68, 0.5);
+}
+
+.products-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px 40px 40px 40px;
+    scrollbar-width: thin;
+    scrollbar-color: #F20881 rgba(15, 15, 45, 0.3);
+}
+
+.products-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.products-content::-webkit-scrollbar-track {
+    background: rgba(15, 15, 45, 0.3);
+    border-radius: 4px;
+}
+
+.products-content::-webkit-scrollbar-thumb {
+    background: #F20881;
+    border-radius: 4px;
+}
+
+.products-content::-webkit-scrollbar-thumb:hover {
+    background: #00fff7;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.product-card {
+    background: rgba(15, 15, 45, 0.9);
+    border: 2px solid #F20881;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 0 20px rgba(242, 8, 129, 0.3);
+    transition: all 0.3s ease;
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card:hover {
+    box-shadow: 0 0 30px rgba(242, 8, 129, 0.6);
+    border-color: #00fff7;
+    transform: scale(1.02);
+}
+
+.product-card .product-name {
+    font-family: 'Press Start 2P', monospace;
+    color: #F7B14E;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    text-shadow:
+        -1px -1px 0 #1A535C,
+        1px -1px 0 #1A535C,
+        -1px  1px 0 #1A535C,
+        1px  1px 0 #1A535C,
+        0px  2px 0 #1A535C,
+        2px  0px 0 #1A535C,
+        0px -2px 0 #1A535C,
+        -2px  0px 0 #1A535C;
+    line-height: 1.3;
+    display: block;
+}
+
+.product-card .product-description {
+    font-family: 'Press Start 2P', monospace;
+    color: #fff;
+    font-size: 0.6rem;
+    margin: 8px 0;
+    line-height: 1.4;
+    display: block;
+}
+
+.product-card .product-price {
+    font-family: 'Press Start 2P', monospace;
+    color: #00fff7;
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin: 8px 0;
+    display: block;
+}
+
+.product-card .product-category {
+    font-family: 'Press Start 2P', monospace;
+    color: #F7B14E;
+    font-size: 0.55rem;
+    margin: 8px 0 4px 0;
+    display: block;
+    opacity: 0.8;
+}
+
+.delete-form {
+    margin-top: 12px;
+}
+
+.product-card .delete-button {
+    font-family: 'Press Start 2P', monospace;
+    background: rgba(255, 0, 0, 0.1);
+    border: 2px solid #ff4444;
+    border-radius: 8px;
+    padding: 8px 12px;
+    color: #ff4444;
+    font-size: 0.55rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.product-card .delete-button:hover {
+    background: #ff4444;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(255, 68, 68, 0.5);
+}
+
+.no-products {
+    color: #fff;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 1rem;
+    margin-top: 50px;
+    text-align: center;
+}
+
+/* Responsive design for new card-based structure */
+@media (max-width: 768px) {
+    .add-product-container {
+        padding: 20px 25px;
+        width: 95%;
+        margin: 80px auto 30px auto;
+    }
+
+    .add-product-title {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .form-label {
+        font-size: 0.6rem;
+    }
+
+    .form-input {
+        font-size: 0.6rem;
+        padding: 8px 12px;
+    }
+
+    .add-product-btn {
+        font-size: 0.6rem;
+        padding: 10px 16px;
+    }
+
+    .products-list-container {
+        width: 95%;
+        max-height: 50vh;
+    }
+
+    .products-header {
+        padding: 20px 25px 15px 25px;
+    }
+
+    .products-content {
+        padding: 15px 25px 25px 25px;
+    }
+
+    .products-title {
+        font-size: 1rem;
+    }
+
+    .search-controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-group {
+        min-width: 100%;
+    }
+
+    .search-label {
+        font-size: 0.55rem;
+    }
+
+    .search-input, .sort-select {
+        font-size: 0.55rem;
+        padding: 6px 10px;
+    }
+
+    .clear-filters-btn {
+        font-size: 0.5rem;
+        padding: 6px 10px;
+        margin-top: 10px;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .product-card {
+        padding: 15px;
+        min-height: 120px;
+    }
+
+    .product-card .product-name {
+        font-size: 0.7rem;
+        margin-bottom: 8px;
+    }
+
+    .product-card .product-description {
+        font-size: 0.55rem;
+        margin: 6px 0;
+    }
+
+    .product-card .product-price {
+        font-size: 0.6rem;
+        margin: 6px 0;
+    }
+
+    .product-card .delete-button {
+        font-size: 0.5rem;
+        padding: 6px 10px;
+    }
+}

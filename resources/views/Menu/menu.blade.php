@@ -311,16 +311,10 @@
                     <p data-i18n="nuggets-ingredients">Nuggets de pollo</p>
                     <span class="price">4,50€</span>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item" hidden>
                     <img src="/img/icons/104_mochis.png" alt="Mochis" class="gif-icon">
                     <h3 data-i18n="mochi">Mochi</h3>
                     <p data-i18n="mochi-ingredients">Mochi de té macha</p>
-                    <span class="price">4,50€</span>
-                </div>
-                <div class="menu-item">
-                    <img src="/img/icons/31_chocolatecake_dish.png" alt="Coulant" class="gif-icon">
-                    <h3 data-i18n="coulant"> Coulant</h3>
-                    <p data-i18n="coulant-ingredients">Mochi de té macha</p>
                     <span class="price">4,50€</span>
                 </div>
             </div>
@@ -334,11 +328,17 @@
             <div class="section-content">
                 <div class="menu-item">
                     <img src="/img/icons/31_chocolatecake_dish.png" alt="Coulant" class="gif-icon">
-                    <h3> Pixel Cake</h3>
-                    <p data-i18n="pixel-cake-ingredients">Delicioso pastel de chocolate con trozos de pixel.</p>
-                    <span class="price">4,00€</span>
+                    <h3 data-i18n="coulant"> Coulant</h3>
+                    <p data-i18n="coulant-ingredients">Mochi de té macha</p>
+                    <span class="price">4,50€</span>
                 </div>
                 <div class="menu-item">
+                    <img src="/img/icons/31_chocolatecake_dish.png" alt="Coulant" class="gif-icon">
+                    <h3> Coulant</h3>
+                    <p data-i18n="pixel-cake-ingredients">Delicioso Coulant con nata</p>
+                    <span class="price">4,00€</span>
+                </div>
+                <div class="menu-item" hidden>
                     <img src="img/icons/57_icecream.png" alt="Helado" class="gif-icon">
                     <h3 data-i18n="helado-pixelado"> Helado Pixelado</h3>
                     <p data-i18n="helado-pixelado-ingredients">Helado de vainilla con chispas de chocolate.</p>

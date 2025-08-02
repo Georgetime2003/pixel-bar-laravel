@@ -46,15 +46,35 @@ Route::get('/admin/users', [DashboardController::class,'users'])->name('admin.us
 Route::get('/admin/users/{id}', [DashboardController::class,'user'])->name('admin.user')->middleware('admin');
 Route::post('/admin/users/{id}/update', [DashboardController::class,'updateUser'])->name('admin.users.update')->middleware('admin');
 
-//Rutes de gestió de productes
-Route::get('/admin/products', [DashboardController::class, 'products'])->name('admin.products')->middleware('admin');
+//Rutes de gestió de productes (consolidades al MenuController)
+Route::get('/admin/products', [MenuController::class, 'menuAdmin'])->name('admin.products')->middleware('admin');
 
 //Creació, actualització i eliminació de productes
-Route::post('/admin/products/createItem', [DashboardController::class, 'createProduct'])->name('admin.products.create')->middleware('admin');
-Route::post('/admin/products/updateItem', [DashboardController::class, 'updateProduct'])->name('admin.products.update')->middleware('admin');
-Route::post('/admin/products/deleteItem', [DashboardController::class, 'deleteProduct'])->name('admin.products.delete')->middleware('admin');
+Route::post('/admin/products/createItem', [MenuController::class, 'createProduct'])->name('admin.products.create')->middleware('admin');
+Route::post('/admin/products/updateItem', [MenuController::class, 'updateProduct'])->name('admin.products.update')->middleware('admin');
+Route::post('/admin/products/deleteItem', [MenuController::class, 'deleteProduct'])->name('admin.products.delete')->middleware('admin');
 
 //Creació, actualització i eliminació de categories de productes
-Route::post('/admin/products/createCategory', [DashboardController::class, 'createCategory'])->name('admin.products.createCategory')->middleware('admin');
-Route::post('/admin/products/updateCategory', [DashboardController::class, 'updateCategory'])->name('admin.products.updateCategory')->middleware('admin');
-Route::post('/admin/products/deleteCategory', [DashboardController::class, 'deleteCategory'])->name('admin.products.deleteCategory')->middleware('admin');
+Route::post('/admin/products/createCategory', [MenuController::class, 'createCategory'])->name('admin.products.createCategory')->middleware('admin');
+Route::post('/admin/products/updateCategory', [MenuController::class, 'updateCategory'])->name('admin.products.updateCategory')->middleware('admin');
+Route::post('/admin/products/deleteCategory', [MenuController::class, 'deleteCategory'])->name('admin.products.deleteCategory')->middleware('admin');
+
+//Creació, actualització i eliminació d'etiquetes de productes
+Route::post('/admin/products/createLabel', [MenuController::class, 'createLabel'])->name('admin.products.createLabel')->middleware('admin');
+Route::post('/admin/products/updateLabel', [MenuController::class, 'updateLabel'])->name('admin.products.updateLabel')->middleware('admin');
+Route::post('/admin/products/deleteLabel', [MenuController::class, 'deleteLabel'])->name('admin.products.deleteLabel')->middleware('admin');
+
+// API endpoints per obtenir dades filtrades
+Route::get('/api/products/category/{categoryId}', [MenuController::class, 'getProductsByCategory'])->name('api.products.by-category')->middleware('admin');
+Route::get('/api/products/label/{labelId}', [MenuController::class, 'getProductsByLabel'])->name('api.products.by-label')->middleware('admin');
+Route::get('/api/products/{productId}', [MenuController::class, 'getProductDetails'])->name('api.products.details')->middleware('admin');
+
+// Ruta per canviar el locale de Laravel via AJAX
+Route::get('/set-locale/{lang}', function ($lang) {
+    $supported = ['en','ca','es','fr','ds'];
+    if (in_array($lang, $supported)) {
+        session(['locale' => $lang]);
+        \App::setLocale($lang);
+    }
+    return response()->json(['locale' => app()->getLocale()]);
+});

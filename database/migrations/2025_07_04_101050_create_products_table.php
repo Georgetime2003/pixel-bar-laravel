@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('name')->comment('Product name');
             $table->text('description')->nullable()->comment('Product description');
             $table->decimal('price', 10, 2)->comment('Product price');
-            $table->string('label-id')->nullable()->comment('Label ID for the product for traslate');
+            $table->string('label_id')->nullable()->comment('Label ID for the product for translate');
         });
     }
 
