@@ -21,33 +21,26 @@
             setTimeout(() => {
                 overlay.style.display = 'none';
             }, 300);
-            // Guardar en localStorage que el usuario cerró la notificación
-            localStorage.setItem('gameNotificationClosed', 'true');
         }
         
-        // Mostrar notificación solo si no se ha cerrado antes
+        // Mostrar notificación siempre al cargar la página
         document.addEventListener('DOMContentLoaded', function() {
-            const notificationClosed = localStorage.getItem('gameNotificationClosed');
             const overlay = document.getElementById('gameNotificationOverlay');
             
-            if (!notificationClosed) {
-                // Mostrar la notificación después de 1 segundo
+            // Mostrar la notificación después de 1 segundo
+            setTimeout(() => {
+                overlay.style.display = 'flex';
                 setTimeout(() => {
-                    overlay.style.display = 'flex';
-                    setTimeout(() => {
-                        overlay.classList.add('show');
-                    }, 50);
-                }, 1000);
-                
-                // Auto-hide después de 10 segundos
-                setTimeout(() => {
-                    if (overlay.classList.contains('show')) {
-                        closeGameNotification();
-                    }
-                }, 11000);
-            } else {
-                overlay.style.display = 'none';
-            }
+                    overlay.classList.add('show');
+                }, 50);
+            }, 1000);
+            
+            // Auto-hide después de 10 segundos
+            setTimeout(() => {
+                if (overlay.classList.contains('show')) {
+                    closeGameNotification();
+                }
+            }, 11000);
         });
         
         // Handle dropdown functionality
