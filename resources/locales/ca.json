@@ -79,5 +79,8 @@
   "subject": "Assumpte",
   "message": "Missatge",
   "send_message": "Enviar Missatge",
-  "back": "Tornar"
+  "back": "Tornar",
+  "game-system-title": "🎮 Sistema de Joc",
+  "game-system-info": "Cada €1 gastat = 5 minuts de joc gratis!",
+  "combo-extra-time": "Combo Estrella: +10 minuts extra"
 }

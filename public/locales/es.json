@@ -89,5 +89,8 @@
   "no-account": "¿No tienes cuenta?",
   "register-here": "Regístrate aquí",
   "already-account": "¿Ya tienes una cuenta?",
-  "login-here": "Inicia sesión aquí"
+  "login-here": "Inicia sesión aquí",
+  "game-system-title": "🎮 Sistema de Juego",
+  "game-system-info": "¡Cada €1 gastado = 5 minutos de juego gratis!",
+  "combo-extra-time": "Combo Estrella: +10 minutos extra"
 }

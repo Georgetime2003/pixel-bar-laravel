@@ -90,5 +90,8 @@
   "name": "Name",
   "email": "E-Mail",
   "phone": "Telefon",
-  "address": "Adresse"
+  "address": "Adresse",
+  "game-system-title": "🎮 Spielsystem",
+  "game-system-info": "Jeder ausgegebene €1 = 5 Minuten kostenloses Spielen!",
+  "combo-extra-time": "Stern-Combo: +10 zusätzliche Minuten"
 }

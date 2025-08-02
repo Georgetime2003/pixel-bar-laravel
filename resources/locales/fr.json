@@ -79,5 +79,8 @@
   "no-account": "Vous n'avez pas de compte?",
   "register-here": "Inscrivez-vous ici",
   "already-account": "Vous avez déjà un compte?",
-  "login-here": "Connectez-vous ici"
+  "login-here": "Connectez-vous ici",
+  "game-system-title": "🎮 Système de Jeu",
+  "game-system-info": "Chaque €1 dépensé = 5 minutes de jeu gratuit!",
+  "combo-extra-time": "Combo Étoile: +10 minutes supplémentaires"
 }

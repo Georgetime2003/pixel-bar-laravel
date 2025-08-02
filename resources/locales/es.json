@@ -79,5 +79,16 @@
   "no-account": "¿No tienes cuenta?",
   "register-here": "Regístrate aquí",
   "already-account": "¿Ya tienes una cuenta?",
-  "login-here": "Inicia sesión aquí"
+  "login-here": "Inicia sesión aquí",
+  "combo-estrella": "COMBO ESTRELLA",
+  "combo-hamburguesa": "🍔 Hamburguesa Crispy",
+  "combo-o": "O",
+  "combo-pizza": "🍕 Pizza",
+  "combo-patatas": "🍟 Patatas",
+  "combo-refresco": "🥤 Refresco",
+  "combo-cerveza": "🍺 Cerveza",
+  "combo-precio-especial": "10,00€",
+  "game-system-title": "🎮 Sistema de Juego",
+  "game-system-info": "¡Cada €1 gastado = 5 minutos de juego gratis!",
+  "combo-extra-time": "Combo Estrella: +10 minutos extra"
 }

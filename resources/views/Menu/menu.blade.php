@@ -14,6 +14,42 @@
             console.log('callback - particles.js config loaded');
         });
         
+        // Función para cerrar la notificación
+        function closeGameNotification() {
+            const overlay = document.getElementById('gameNotificationOverlay');
+            overlay.classList.remove('show');
+            setTimeout(() => {
+                overlay.style.display = 'none';
+            }, 300);
+            // Guardar en localStorage que el usuario cerró la notificación
+            localStorage.setItem('gameNotificationClosed', 'true');
+        }
+        
+        // Mostrar notificación solo si no se ha cerrado antes
+        document.addEventListener('DOMContentLoaded', function() {
+            const notificationClosed = localStorage.getItem('gameNotificationClosed');
+            const overlay = document.getElementById('gameNotificationOverlay');
+            
+            if (!notificationClosed) {
+                // Mostrar la notificación después de 1 segundo
+                setTimeout(() => {
+                    overlay.style.display = 'flex';
+                    setTimeout(() => {
+                        overlay.classList.add('show');
+                    }, 50);
+                }, 1000);
+                
+                // Auto-hide después de 10 segundos
+                setTimeout(() => {
+                    if (overlay.classList.contains('show')) {
+                        closeGameNotification();
+                    }
+                }, 11000);
+            } else {
+                overlay.style.display = 'none';
+            }
+        });
+        
         // Handle dropdown functionality
         document.addEventListener('DOMContentLoaded', function() {
             const dropdown = document.querySelector('.dropdown');
@@ -60,6 +96,22 @@
         </div>
     </nav>
     <!-- FI NAVBAR -->
+
+    <!-- NOTIFICACIÓN OVERLAY SISTEMA DE JUEGO -->
+    <div class="game-notification-overlay" id="gameNotificationOverlay">
+        <div class="game-notification">
+            <button class="close-notification" onclick="closeGameNotification()">✕</button>
+            <div class="notification-content">
+                <img src="/img/icons/coin.gif" alt="Coin" class="notification-icon" style="width: 32px; height: 32px;">
+                <div class="notification-text">
+                    <h3 data-i18n="game-system-title">🎮 Sistema de Juego</h3>
+                    <p data-i18n="game-system-info">¡Cada €1 gastado = 5 minutos de juego gratis!</p>
+                    <p data-i18n="combo-extra-time" class="combo-bonus">Combo Estrella: +10 minutos extra</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FIN NOTIFICACIÓN OVERLAY -->
 
     <div class="container">
         <!-- COMBO ESPECIAL - ESTRELLA DEL MENÚ -->
@@ -311,18 +363,6 @@
                     <p data-i18n="nuggets-ingredients">Nuggets de pollo</p>
                     <span class="price">4,50€</span>
                 </div>
-                <div class="menu-item">
-                    <img src="/img/icons/104_mochis.png" alt="Mochis" class="gif-icon">
-                    <h3 data-i18n="mochi">Mochi</h3>
-                    <p data-i18n="mochi-ingredients">Mochi de té macha</p>
-                    <span class="price">4,50€</span>
-                </div>
-                <div class="menu-item">
-                    <img src="/img/icons/31_chocolatecake_dish.png" alt="Coulant" class="gif-icon">
-                    <h3 data-i18n="coulant"> Coulant</h3>
-                    <p data-i18n="coulant-ingredients">Mochi de té macha</p>
-                    <span class="price">4,50€</span>
-                </div>
             </div>
         </section>
         <!-- Postres -->
@@ -333,17 +373,29 @@
             </h2>
             <div class="section-content">
                 <div class="menu-item">
+                    <img src="/img/icons/104_mochis.png" alt="Mochis" class="gif-icon">
+                    <h3 data-i18n="mochi">Mochi</h3>
+                    <p data-i18n="mochi-ingredients">Mochi de té macha</p>
+                    <span class="price">4,50€</span>
+                </div>
+                <div class="menu-item">
+                    <img src="/img/icons/31_chocolatecake_dish.png" alt="Coulant" class="gif-icon">
+                    <h3 data-i18n="coulant">Coulant</h3>
+                    <p data-i18n="coulant-ingredients">Delicioso Coulant con Nata</p>
+                    <span class="price">4,50€</span>
+                </div>
+                {{-- <div class="menu-item">
                     <img src="/img/icons/31_chocolatecake_dish.png" alt="Coulant" class="gif-icon">
                     <h3> Pixel Cake</h3>
                     <p data-i18n="pixel-cake-ingredients">Delicioso pastel de chocolate con trozos de pixel.</p>
                     <span class="price">4,00€</span>
-                </div>
-                <div class="menu-item">
+                </div> --}}
+                {{-- <div class="menu-item">
                     <img src="img/icons/57_icecream.png" alt="Helado" class="gif-icon">
                     <h3 data-i18n="helado-pixelado"> Helado Pixelado</h3>
                     <p data-i18n="helado-pixelado-ingredients">Helado de vainilla con chispas de chocolate.</p>
                     <span class="price">3,50€</span>
-                </div>
+                </div> --}}
             </div>
         </section>
     </div>

@@ -89,5 +89,8 @@
   "confirm-password": "Repeat Password",
   "no-account": "Don't have an account?",
   "already-account": "Already have an account?",
-  "register-here": "Register here"
+  "register-here": "Register here",
+  "game-system-title": "🎮 Game System",
+  "game-system-info": "Every €1 spent = 5 minutes of free gaming!",
+  "combo-extra-time": "Star Combo: +10 extra minutes"
 }
